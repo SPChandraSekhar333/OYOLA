@@ -1,0 +1,158 @@
+.container {
+    padding-top: 6rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.container>.info {
+    margin: 5rem 3.5rem 2rem 2rem;
+}
+
+.container>.info>h1 {
+    margin: 0.7rem;
+    font-weight: 500;
+}
+
+.container>.info>.button {
+    height: 5vh;
+    width: 9vw;
+    margin: 1.5rem 0.7rem;
+    border-radius: 5rem;
+    background-color: #111A4F;
+    line-height: 5vh;
+    text-align: center;
+    transition: all 0.25s;
+}
+.container>.info>.button>a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 1.24rem;
+}
+
+.container>.info>.button:hover {
+    cursor: pointer;
+    background-color: rgb(17, 26, 79,0.9);
+}
+.container>.img>.button{
+    display: none;
+    height: 5vh;
+    width: 13vw;
+    margin-top: 3rem;   
+    border-radius: 5rem;
+    background-color: #111A4F;
+    line-height: 5vh;
+    text-align: center;
+    transition: all 0.25s;
+}
+.container>.img>.button>a {
+    display: block;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+}
+
+.container>.info>div {
+    margin: 0.7rem;
+    height: 0.1rem;
+    width: 5rem;
+    background-color: #283060;
+}
+
+.container>.info>p {
+    margin: 0.7rem;
+    line-height: 1.52rem;
+    font-weight: 400;
+}
+
+.container>.img {
+    padding: 2rem;
+}
+
+/* making responsive */
+
+/* small laptop */
+@media screen and (max-width:1024px){
+    .container>.info>.button>a {
+        font-size: 1rem;
+    }
+    .container>.img {
+        padding-top: 5rem;
+    }
+}
+
+/* tablets */
+
+@media screen and (max-width:768px){
+    .container {
+        padding-top: 2rem;
+    }
+    .container>.info>h1 {
+        font-weight: 400;
+    }
+    .container>.info>p {
+        width: 100%;
+        font-size: 15px;
+    }
+    .container>.img {
+        padding-top: 8rem;
+    }
+    .container>.info>.button{
+        display: none;
+    }
+    .container>.img>.button{
+        display: block;    
+        margin: 4rem auto;         
+    }
+}
+
+/* large phones */
+
+@media screen and (max-width:426px){
+    .container {
+        padding-top: 0rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .container>.img {
+        padding-top: 0rem;
+    }
+    .container>.info>.button{
+        display: block;
+        width: 20vw;
+    }
+    .container>.img>.button{
+        display: none;             
+    }
+}
+
+/* medium phones */
+
+@media screen and (max-width:376px){
+    .container>.info>.button{
+        width: 25vw;
+    }
+}
+
+
+/* small phones */
+
+@media screen and (max-width:321px){
+    .container>.info{
+        margin: 5.5rem 0.6rem;
+        margin-bottom: 1rem;
+    }
+    .container>.info>h1 , .container>.info>div , .container>.info>p {
+        margin: 0.5rem 0rem;
+    }
+    .container>.info>.button {
+        height: 5vh;
+        width: 27vw;
+        margin: 1rem 0rem
+    }
+}
